@@ -3,8 +3,9 @@ import NavBar from '@/components/NavBar'
 export default function Acerca(){
     return(
         <>
-        <main className="h-scren w-screen bg-black">
         <NavBar></NavBar>
+        <main className="h-scren w-screen bg-black">
+        
 
         <h2 className="mt-6 text-2xl italic font-bold text-white">Historia</h2>
         <p className="text-base not-italic font-semibold text-white text-justify">PsicoAsesor nace como un proyecto confromado por terapeutas y entrenadores de vida con mas de 10 años de experiencia impartiendo talleres y entrenamientos vivenciales con enfoque en Psicoterapia Gestalt mediante el manual "Vivir Libre" desarrollado por Bob Trask inspirando personas desde 1975 a encontrar su máximo potencial mediante la Aceptación, Respecto, Afecto y Soporte.</p>

@@ -4,8 +4,9 @@ import NavBar from '@/components/NavBar'
 export default function Asesores(){
     return(
         <>
-        <main className="h-scren w-screen bg-black">
         <NavBar></NavBar>
+        <main className="h-scren w-screen bg-black">
+        
     
 
         <h2 className="mt-6 text-2xl text-center italic font-bold text-white">Asesores</h2>
