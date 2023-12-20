@@ -4,10 +4,44 @@ import Link from 'next/link';
 import NavBar from '@/components/NavBar'
 import Form from '@/components/Form'
 import axios from 'axios';
+import { useEffect, useState } from 'react'
 
 const preventDefault = (event) => event.preventDefault();
 
+// const sendData = async () => {
+//   setLoading(true);
+//   console.log('sendData');
+//   console.log(nombre, apellidos, correo, matricula, edad);
+//   if(nombre === '' || apellidos === '' || correo === '' || matricula === '' || edad === ''){
+//       toast.error('Llena todos los campos');
+//       setLoading(false);
+//       return;
+//   }
+
+//   try{
+
+//       const resultado = await axios.post('/api/testmongo', {
+//           nombre: nombre,
+//           apellidos: apellidos,
+//           correo: correo,
+//           matricula: matricula,
+//           edad: edad
+//       })
+//       toast.success('Datos enviados');
+//       console.log(resultado);
+//       getData();
+//   } catch (error) {
+//       console.log(error);
+//   }
+
+//   setLoading(false);
+// }
+
 export default function Main() {
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([{}]);
+  // const [loading, setLoading] = useState(false);
+
   return (
     <>
     <NavBar></NavBar>
@@ -31,6 +65,22 @@ export default function Main() {
       <Form></Form>
     </div>
     </div>
+
+    {/* Barra de llenado */}
+    <h1 className="flex flex-col text-blue-500 mt-2 p-3 font-bold">Porfavor inserta los datos que deseas guardar   </h1>
+  <div className="flex justify-center items-center h-70 bg-yellow-100 flex-col border border-black">
+    <input type="text" placeholder="Nombre" onChange={(e) => setNombre(e.target.value)}/>
+    <input type="text" placeholder="Apellidos" onChange={(e) => setApellidos(e.target.value)}/>
+    <input type="text" placeholder="Correo" onChange={(e) => setCorreo(e.target.value)}/>
+    <input type="text" placeholder="Matricula" onChange={(e) => setMatricula(e.target.value)}/>
+    <input type="text" placeholder="Edad" onChange={(e) => setEdad(e.target.value)}/>
+  </div>
+  {/* boton de carga */}
+  {/* {loading ? (
+    <button className="bg-red-500 text-black py-2 px-4 mt-4 mt-1 rounded-md border border-black" disabled> Detener </button>
+  ) : (
+    <button className="bg-green-500 text-black py-2 px-4 mt-4 mt-1 rounded-md border border-black hover:bg-green-700 transition duration-300" onClick={sendData}>Iniciar</button>
+  )} */}
     </>
   )
 }
