@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navigation = [
   { name: 'Inicio', href: '/', current: true },
@@ -36,7 +37,7 @@ export default function Example() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
+                  <image
                     className="h-8 w-auto"
                     src="/images/Psico_logo.png"
                     alt="Psico_Logo"
@@ -78,12 +79,12 @@ export default function Example() {
                     <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                      {/* <img
+                      <image
                         className="h-8 w-10 rounded-full"
                         src="/images/Whats_logo.svg"
                         // href="https://api.whatsapp.com/send?phone=526142202743&text=Hola,%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20de%20sus%20servicios,%20me%20gustar%C3%ADa%20que%20me%20contacten."
                         alt=""
-                      /> */}
+                      />
                     </Menu.Button>
                   </div>
                   <Transition

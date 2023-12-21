@@ -8,7 +8,7 @@ export default function Acerca(){
         
 
         <h2 className='mt-6 text-2xl italic font-bold text-white'>Historia</h2>
-        <p className='text-base not-italic font-semibold text-white text-justify'>PsicoAsesor nace como un proyecto confromado por terapeutas y entrenadores de vida con mas de 10 años de experiencia impartiendo talleres y entrenamientos vivenciales con enfoque en Psicoterapia Gestalt mediante el manual "Vivir Libre" desarrollado por Bob Trask inspirando personas desde 1975 a encontrar su máximo potencial mediante la Aceptación, Respecto, Afecto y Soporte.</p>
+        <p className='text-base not-italic font-semibold text-white text-justify'>PsicoAsesor nace como un proyecto confromado por terapeutas y entrenadores de vida con mas de 10 años de experiencia impartiendo talleres y entrenamientos vivenciales con enfoque en Psicoterapia Gestalt mediante el manual Vivir Libre desarrollado por Bob Trask inspirando personas desde 1975 a encontrar su máximo potencial mediante la Aceptación, Respecto, Afecto y Soporte.</p>
 
         <h2 className='mt-6 text-2xl italic font-bold text-white'>Vision</h2>
         <p className='text-base not-italic font-semibold text-white text-justify'>Atender con eficacia, responsabilidad y sentido humanitario los problemas psicológicos que se presentan en las diferentes áreas del bienestar y desarrollo social en las que el comportamiento del individuo reviste esencial importancia para la vida en sociedad, tanto en los ámbitos local y regional como en el nacional.</p>
