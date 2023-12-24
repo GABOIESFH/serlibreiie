@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 
 export default async function handler (req, res){
     const {method,body, query} =req
@@ -28,6 +28,22 @@ export default async function handler (req, res){
         return res.status(200).json(result)
         
         break;
+
+    case "DELETE":
+        
+        try {
+                // if (!query.id) {
+                //     return res.status(400).json({ message: "Falta el identificador" });
+                // }
+
+                const id = query.id;
+                const deleteResult = await alumno.deleteOne({ "_id": ObjectId(id)});
+
+                return res.status(200).json({ message: "Documento eliminado con éxito" });
+            } catch (error) {
+                return res.status(500).json({ message: "Error al eliminar" });
+            }
+            break;
 
     }
 }
