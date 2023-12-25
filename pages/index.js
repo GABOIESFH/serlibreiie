@@ -9,6 +9,7 @@ import BtnLogin from "@/components/BtnLogin";
 import nextAuth from "next-auth";
 import { useSession} from "next-auth/react";
 
+
 //Funcion para eliminar datos
 
 
@@ -29,16 +30,7 @@ export default function Main() {
     console.log("useEffect");
 
     getData();
-    if (status !== 'loading' && status=== 'authenticated'){
-      //router.push('/dashboard')
-      return(
-          <div>
-          Signed in as {session.user.email} <br/>
-          <button className='text-red-600'onClick={()=>signOut()}>Sign Out</button>
-          
-          </div>
-      )
-  }
+     
   }, []);
 
   //Obtener datos
@@ -107,7 +99,7 @@ export default function Main() {
     }
   };
 
-
+ 
 
   return (
     //FrontEnd
@@ -234,56 +226,7 @@ export default function Main() {
       </div>
 
 
-    </>
+    </> 
+
   );
-}
-
-
-
-//const preventDefault = (event) => event.preventDefault();
-
-// const sendData = async () => {
-//   setLoading(true);
-//   console.log('sendData');
-//   console.log(nombre, apellidos, correo, matricula, edad);
-//   if(nombre === '' || apellidos === '' || correo === '' || matricula === '' || edad === ''){
-//       toast.error('Llena todos los campos');
-//       setLoading(false);
-//       return;
-//   }
-
-//   try{
-
-//       const resultado = await axios.post('/api/testmongo', {
-//           nombre: nombre,
-//           apellidos: apellidos,
-//           correo: correo,
-//           matricula: matricula,
-//           edad: edad
-//       })
-//       toast.success('Datos enviados');
-//       console.log(resultado);
-//       getData();
-//   } catch (error) {
-//       console.log(error);
-//   }
-
-//   setLoading(false);
-// }
-
-{
-  /* Barra de llenado */
-}
-{
-  /* <h1 className="flex flex-col text-blue-500 mt-2 p-3 font-bold">Porfavor inserta los datos que deseas guardar   </h1>
-  <div className="flex justify-center items-center h-70 bg-yellow-100 flex-col border border-black">
-    <input type="text" placeholder="Nombre" onChange={(e) => setNombre(e.target.value)}/>
-    <input type="text" placeholder="Apellidos" onChange={(e) => setApellidos(e.target.value)}/>
-    <input type="text" placeholder="Correo" onChange={(e) => setCorreo(e.target.value)}/>
-    <input type="text" placeholder="Matricula" onChange={(e) => setMatricula(e.target.value)}/>
-    <input type="text" placeholder="Edad" onChange={(e) => setEdad(e.target.value)}/> */
-}
-
-{
-  /* </div> */
 }
