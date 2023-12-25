@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import BtnLogin from "@/components/BtnLogin";
 import nextAuth from "next-auth";
 import { useSession} from "next-auth/react";
-import Router from "next/router";
+import Router, { useRouter } from "next/router";
 
 
 //Funcion para eliminar datos
@@ -101,7 +101,7 @@ export default function Main() {
   };
 
 const {usuario: session, status}=useSession();
-const router= useRouter();
+const router=useRouter();
 
 
 
