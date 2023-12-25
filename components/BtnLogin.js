@@ -36,7 +36,7 @@ export default function BtnLogin(){
         
         <div>
         Not Signed in <br/>
-        <button className='text-red-600 w-8 h-8'onClick={()=>signIn({callbackUrl:'/dashboard'})}>Sign In</button>
+        <button className='text-red-600 w-8 h-8'onClick={()=>signIn()}>Sign In</button>
         </div>
     )
 }
