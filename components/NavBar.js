@@ -75,10 +75,8 @@ export default function Example() {
                 </button> */}
                 {<Link className= 'text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-2/3 sm:w-auto px-5 py-2.5 my-8 text-center' href={'https://api.whatsapp.com/send?phone=526142283848&text=Hola,%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20de%20sus%20servicios,%20me%20gustar%C3%ADa%20que%20me%20contacten.'}
                 >Contactenos</Link>}
-
-              
-                
-              </div>
+                </div>
+                <BtnLogin></BtnLogin>
             </div>
           </div>
 
