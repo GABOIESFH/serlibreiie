@@ -10,6 +10,9 @@ import nextAuth from "next-auth";
 import { useSession} from "next-auth/react";
 import Router, { useRouter } from "next/router";
 import PregFrec from '@/components/PregFrec'
+import LogoOficial from "@/components/LogoOficial";
+import Image from "next/image";
+import imagenes from "@/public/imagenes";
 
 
 
@@ -118,7 +121,7 @@ router.push('/dashboard')
     <>
       <NavBar></NavBar>
       <BtnLogin></BtnLogin>
-
+      
       <div>
         <div className="text-center">
           <h1 className="italic font-extrabold text-3xl">
@@ -126,8 +129,14 @@ router.push('/dashboard')
           </h1>
           <h3 className="font-bold">Bienvenidos</h3>
         </div>
-        <p>Ser Libre se basa en la experiencia de más 10 años de servicio a la sociedad, un espacio de trabajo interdisciplinario, conformado por entrenadores especiales de diferentes zonas de la Republica Mexicana, elegidos de manera rigurosa para brindar el mejor servicio a nuestros alumnos. </p>
+        <LogoOficial/>
+       
+       
+        
+        <p className="pt-4">Ser Libre se basa en la experiencia de más 10 años de servicio a la sociedad, un espacio de trabajo interdisciplinario, conformado por entrenadores especiales de diferentes zonas de la Republica Mexicana, elegidos de manera rigurosa para brindar el mejor servicio a nuestros alumnos. </p>
           <p>Ser Libre esta comprometido con la sociedad, por lo que de manera constante realiza una serie metas sociales con el fin de reestructurar los tejidos sociales y las familias.</p>
+    
+       
         <div className="flex flex-col items-center align-middle">
           <div className="py-5 font-extrabold italic">
             <h1>Nuestra Ubicacion</h1>
