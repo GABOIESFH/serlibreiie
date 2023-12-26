@@ -9,6 +9,8 @@ import BtnLogin from "@/components/BtnLogin";
 import nextAuth from "next-auth";
 import { useSession} from "next-auth/react";
 import Router, { useRouter } from "next/router";
+import PregFrec from '@/components/PregFrec'
+
 
 
 //Funcion para eliminar datos
@@ -105,6 +107,8 @@ const router=useRouter();
 
 
 
+
+
 if(status === 'authenticated'){
 router.push('/dashboard')
 }
@@ -112,129 +116,185 @@ router.push('/dashboard')
   return (
     //FrontEnd
     <>
-    <NavBar></NavBar>
-    <BtnLogin></BtnLogin>
-      
+      <NavBar></NavBar>
+      <BtnLogin></BtnLogin>
+
       <div>
-        <div>
-          <h1>Instituto Ser Libre De Inteligencia Emocional</h1>
-          <h3>Bienvenidos</h3>
-          <p>texto de prueba</p>
-          <p>texto de prueba</p>
-          <p>texto de prueba</p>
-          <p>texto de prueba</p>
-          <p>texto de prueba</p>
-          <p>texto de prueba</p>
-          <p>texto de prueba</p>
-          <p>texto de prueba</p>
+        <div className="text-center">
+          <h1 className="italic font-extrabold text-3xl">
+            Instituto Ser Libre De Inteligencia Emocional
+          </h1>
+          <h3 className="font-bold">Bienvenidos</h3>
         </div>
-        <div className="flex justify-center">
-          <h1>Nuestra Ubicacion</h1>
-          <br />
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1229.1654237940943!2d-106.06692977094428!3d28.635841577239855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea435455de5e15%3A0x2ff5ea5977ebce60!2sC.%20Mariano%20Jim%C3%A9nez%201304%2C%20Obrera%2C%2031350%20Chihuahua%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1693525556708!5m2!1ses-419!2smx"
-            className='width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"'
-          ></iframe>
-        </div>
-       
-      </div>
-
-      {/* Formulario Grid Dos columnas */}
-      <div className="">
-     
-          <div className="grid gap-6 mb-6 md:grid-cols-3">
-            {/* Nombre */}
-            <div>
-              <label
-              
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Nombre
-              </label>
-              <input
-                type="text"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Su Nombre"
-                onChange={(e) => setNombre(e.target.value)}
-              ></input>
-            </div>
-
-
-            {/* Apellido */}
-            <div>
-              <label
-                
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Apellido
-              </label>
-              <input
-                type="text"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Su Apellido"
-                onChange={(e) => setApellidos(e.target.value)}
-              ></input>
-            </div>
-
-
-            {/*Telefono*/}
-            <div>
-              <label
-                
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Telefono
-              </label>
-              <input
-                type="text"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Telefono"
-                onChange={(e) => setMatricula(e.target.value)}
-              ></input>
-            </div>
-
-
-            {/* E-mail */}
-            <div>
-              <label
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Correo Electronico
-              </label>
-              <input
-                type="text"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Su Correo"
-                onChange={(e) => setCorreo(e.target.value)}
-              ></input>
-            </div>
-
-            <div>
-              <label 
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Edad
-              </label>
-              <input
-                type="text"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Edad"
-                onChange={(e) => setEdad(e.target.value)}
-              ></input>
-            </div>
+        <p>Ser Libre se basa en la experiencia de más 10 años de servicio a la sociedad, un espacio de trabajo interdisciplinario, conformado por entrenadores especiales de diferentes zonas de la Republica Mexicana, elegidos de manera rigurosa para brindar el mejor servicio a nuestros alumnos. </p>
+          <p>Ser Libre esta comprometido con la sociedad, por lo que de manera constante realiza una serie metas sociales con el fin de reestructurar los tejidos sociales y las familias.</p>
+        <div className="flex flex-col items-center align-middle">
+          <div className="py-5 font-extrabold italic">
+            <h1>Nuestra Ubicacion</h1>
           </div>
 
-          {/* Boton Enviar */}
-          <button
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={sendData}
-          >
-            Enviar
-          </button>
-        
+          <div>
+            <iframe
+              title="Mapa"
+              src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7003.582626929154!2d-106.067382!3d28.636016000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea435455de5e15%3A0x2ff5ea5977ebce60!2sC.%20Mariano%20Jim%C3%A9nez%201304%2C%20Obrera%2C%2031350%20Chihuahua%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1703561469523!5m2!1ses-419!2smx'
+              className="w-full aspect-[4/3]"
+            ></iframe>
+          </div>
+
+          <div>
+            <h2 className=" text-center font-extrabold pt-8">
+              Horario de Atencion
+            </h2>
+            <ul class="mt-2 text-lg not-italic font-semibold text-center">
+              <li>Lun: 8:00–20:00</li>
+              <li>Mar: 8:00–20:00</li>
+              <li>Mie: 8:00–20:00</li>
+              <li>Jue: 8:00–20:00</li>
+              <li>Vie: 8:00–20:00</li>
+              <li>Sab: 10:00–14:00</li>
+              <li>Dom: Previa Cita</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
+      <div className="flex row-auto py-8">
+        <div>
+          <h2 className=" text-center font-extrabold py-8">
+            Preguntas frecuentes
+          </h2>
+          <p>
+            <b>
+              ¿Cuánto cuesta y cuál es la duración de la consulta informativa?
+            </b>
+          </p>
+          <p>
+            La consulta informativa es totalmente gratis y dura 25 minutos,
+            pero, de ser necesario, extenderemos el tiempo para tener una idea
+            más concreta de tu caso particular.
+          </p>
+          <p>
+            <b>¿Cuántas sesiones de terapia necesito?</b>
+          </p>
+          <p>
+            Cada situación es diferente porque cada persona es única. No hay un
+            número universal de terapias, como tampoco hay un único camino para
+            superar todos los problemas. No obstante, hablaremos desde un
+            principio para crear un plan que se adapte a tus necesidades.
+          </p>
+          <p>
+            <b>¿Atiende también en mi ciudad?</b>
+          </p>
+          <p>
+            Desde antes de las restricciones por la pandemia, me he
+            especializado en consultas online, atendiendo a decenas de pacientes
+            de distintos países. No hay ningún tipo de restricción basada la
+            ciudad en la que vivas.
+          </p>
+          <p>
+            <b>¿Necesito equipo especial para la consulta online?</b>
+          </p>
+          <p>
+            Basta con un celular, tablet o computadora con acceso a internet. No
+            necesitas un programa especial. Las sesiones las podemos hacer por
+            Zoom, WhatsApp, Google Meet o cualquier aplicación similar.
+          </p>
+        </div>
+        <PregFrec></PregFrec>
+      </div>
 
-    </> 
+      {/* Formulario*/}
+      <div className="bg-black">
+        <h3 className="text-white text-center italic font-extrabold text-xl py-8">
+          Contactenos
+        </h3>
+        <div className="grid gap-6 mb-6 md:grid-cols-3">
+          {/* Nombre */}
+          <div>
+            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Nombre
+            </label>
+            <input
+              type="text"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Su Nombre"
+              onChange={(e) => setNombre(e.target.value)}
+            ></input>
+          </div>
 
+          {/* Apellido */}
+          <div>
+            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Apellido
+            </label>
+            <input
+              type="text"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Su Apellido"
+              onChange={(e) => setApellidos(e.target.value)}
+            ></input>
+          </div>
+
+          {/*Telefono*/}
+          <div>
+            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Telefono
+            </label>
+            <input
+              type="text"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Telefono"
+              onChange={(e) => setMatricula(e.target.value)}
+            ></input>
+          </div>
+
+          {/* E-mail */}
+          <div>
+            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Correo Electronico
+            </label>
+            <input
+              type="text"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Su Correo"
+              onChange={(e) => setCorreo(e.target.value)}
+            ></input>
+          </div>
+
+          <div>
+            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Edad
+            </label>
+            <input
+              type="text"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Edad"
+              onChange={(e) => setEdad(e.target.value)}
+            ></input>
+          </div>
+
+          <div>
+            <button
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-2/3 sm:w-auto px-5 py-2.5 my-8 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              onClick={sendData}
+            >
+              Enviar
+            </button>
+          </div>
+        </div>
+
+        {/* Boton Enviar
+        <button
+          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          onClick={sendData}
+        >
+          Enviar
+        </button> */}
+      </div>
+
+      <footer className="italic text-lg font-extrabold text-center">
+        Developed by Gabooo
+      </footer>
+    </>
   );
 }
