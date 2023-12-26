@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link';
 import Image from 'next/image';
+import BtnLogin from './BtnLogin';
 
 const navigation = [
   { name: 'Inicio', href: '/', current: true },
@@ -63,7 +64,7 @@ export default function Example() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="absolute inset-y-0 right-0 flex space-x-3 items-center pr-1 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/* <button
                   type="button"
                   className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -72,48 +73,10 @@ export default function Example() {
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button> */}
-                {<Link href={'https://heroicons.com/'}
-                >Link</Link>}
+                {<Link className= 'text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-2/3 sm:w-auto px-5 py-2.5 my-8 text-center' href={'https://api.whatsapp.com/send?phone=526142283848&text=Hola,%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20de%20sus%20servicios,%20me%20gustar%C3%ADa%20que%20me%20contacten.'}
+                >Contactenos</Link>}
 
-                {/* Profile dropdown */}
-               
-                <Menu as="div" className="relative ml-3">
-                  <div>
-                    <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="absolute -inset-1.5" />
-                      <span className="sr-only">Open user menu</span>
-                      
-                      {/* <image
-                        // className="h-8 w-10 rounded-full"
-                        src="/images/Whats_logo.svg"
-                        // href="https://api.whatsapp.com/send?phone=526142202743&text=Hola,%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20de%20sus%20servicios,%20me%20gustar%C3%ADa%20que%20me%20contacten."
-                        alt=""
-                      /> */}
-                    </Menu.Button>
-                  </div>
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="https://api.whatsapp.com/send?phone=526142283848&text=Hola,%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20de%20sus%20servicios,%20me%20gustar%C3%ADa%20que%20me%20contacten."
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Contactenos
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
+              
                 
               </div>
             </div>

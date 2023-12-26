@@ -16,6 +16,8 @@ import LogoOficial from "@/components/LogoOficial";
 
 
 
+
+
 //Funcion para eliminar datos
 
 
@@ -120,7 +122,7 @@ router.push('/dashboard')
     //FrontEnd
     <>
       <NavBar></NavBar>
-      <BtnLogin></BtnLogin>
+      
       
       <div>
         <div className="text-center">
