@@ -11,8 +11,8 @@ import { useSession} from "next-auth/react";
 import Router, { useRouter } from "next/router";
 import PregFrec from '@/components/PregFrec'
 import LogoOficial from "@/components/LogoOficial";
-import Image from "next/image";
-import imagenes from "@/public/imagenes";
+
+
 
 
 
